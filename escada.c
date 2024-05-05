@@ -2,22 +2,32 @@
 
 int main(void)
 {
-  int x = 0;
-  int y = 0;
 
-  for (x = 0; x < 5; x++)
+  // Loop para construir as linhas da pirâmide
+  for (int i = 0; i < 5; i++)
   {
-    for (y = 0; y < 5; y++)
+    // Espaços em branco à esquerda
+    for (int j = 0; j < 5 - i - 1; j++)
     {
-      if ((x + y) < 4)
-      {
-        printf(" ");
-      }
-      else
-      {
-        printf("X");
-      }
-        }
+      printf(" ");
+    }
+
+    // Tijolos esquerda
+    for (int j = 0; j <= i; j++)
+    {
+      printf("#");
+    }
+
+    // Espaço entre as pirâmides
+    printf("  ");
+
+    // Tijolos direita
+    for (int j = 0; j <= i; j++)
+    {
+      printf("#");
+    }
+
+    // Nova linha para a próxima linha da pirâmide
     printf("\n");
   }
 
